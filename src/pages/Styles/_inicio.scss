@@ -1,0 +1,49 @@
+.container {
+  @include flex-container(center, center, nowrap);
+  flex-direction: column;
+  height: 100vh;
+  &-title {
+    margin-bottom: 2rem;
+    h1 {
+      font-size: 2.4rem;
+      color: $secondary_color;
+      letter-spacing: percentageToPx(30, 60);
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    p {
+      font-size: 2rem;
+      text-align: center;
+      letter-spacing: percentageToPx(20, 40);
+      color: $tertiary_color;
+    }
+  }
+  &-logo {
+    margin-bottom: 2rem;
+    width: 9.7rem;
+    height: 12.2rem;
+  }
+}
+
+@mixin icons($name, $color) {
+  &-#{$name} {
+    a {
+      @include icon-size-color(5rem, $color);
+    }
+    a:hover {
+      color: $tertiary_color;
+    }
+  }
+  &-#{$name}:not(:first-child) {
+    margin-left: 3rem;
+  }
+}
+
+.container-social {
+  @include flex-container(center, center, nowrap);
+  width: 100%;
+  @each $icon, $color in $icons-social {
+    @include icons($icon, $color);
+  }
+}

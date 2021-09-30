@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import "../abstracts/variables", "../abstracts/funciones";
+@import "./Styles/inicio", "./Styles/sobre-mi", "../components/Navbar/navbar", "../components/Sidebar/sidebar";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: $primary_color;
+  height: 100vh;
+  width: 100%;
+}
+
+.index-circle-top {
+  @include circle-size(10rem, 10rem, $secondary_color);
+  top: -5rem;
+  left: -5rem;
+}
+
+.index-circle-bottom {
+  @include circle-size(10rem, 10rem, $secondary_color);
+  bottom: -5rem;
+  right: -5rem;
+}

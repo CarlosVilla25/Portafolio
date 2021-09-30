@@ -1,0 +1,14 @@
+.container-navbar {
+  @include flex-container(flex-end, center, nowrap);
+  position: absolute;
+  top: 4rem;
+  right: 5rem;
+  z-index: 10;
+  span {
+    @include icon-size-color(4rem, $secondary_color);
+  }
+  span:hover {
+    cursor: pointer;
+    color: $tertiary_color;
+  }
+}

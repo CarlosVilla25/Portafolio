@@ -1,0 +1,5 @@
+@function percentageToPx($fontSize, $percentage) {
+  // $fontSize: $fontSize - ($fontSize * $percentage/100);
+  $fontSize: ($fontSize * $percentage/100);
+  @return $fontSize * 1px
+}

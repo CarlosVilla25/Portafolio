@@ -1,0 +1,29 @@
+$primary_color: #252525;
+$secondary_color: #cca862;
+$tertiary_color: #f8f9fa;
+
+@mixin flex-container($justifyContent, $alignItems, $wrap) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  flex-wrap: $wrap;
+}
+
+@mixin icon-size-color($fontSize, $color) {
+  font-size: $fontSize;
+  color: $color;
+}
+
+@mixin circle-size($width, $height, $color) {
+  width: $width;
+  height: $height;
+  background-color: $color;
+  border-radius: 50%;
+  position: absolute;
+}
+
+$icons-social: (
+  "github": $secondary_color,
+  "instagram": $secondary_color,
+  "linkedin": $secondary_color,
+);
